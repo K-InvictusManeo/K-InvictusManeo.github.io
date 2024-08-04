@@ -1,0 +1,9 @@
+Package: ZeroinflatedCode
+Title: hybrid model for zero-inflated proportion data
+Version: 0.0.0.9000
+Authors@R: person("Zheng", "Yangzi", email = "20033884r@connect.polyu.hk", role = c("aut", "cre"))
+Description: deal with zero-inflated proportion data
+License: MIT
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
