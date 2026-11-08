@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#171916" />
+    <meta
+      name="description"
+      content="MDA 是本地优先、由研究者明确指定科学决策的数据分析工作区，覆盖微生物组与随机对照试验分析。"
+    />
+    <meta property="og:title" content="MDA · Medical Data Analysis" />
+    <meta
+      property="og:description"
+      content="研究者做决定，框架负责冻结、执行、验证与交付。数据留在本地。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/mda-otter.png" />
+    <title>MDA · 本地优先的研究分析工作区</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="MDA 首页">
+        <span class="brand-mark" aria-hidden="true">M</span>
+        <span>
+          <strong>MDA</strong>
+          <small>Medical Data Analysis</small>
+        </span>
+      </a>
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        data-menu-button
+      >
+        <span></span><span></span>
+        <span class="sr-only">打开导航</span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="主要导航" data-nav>
+        <a href="#principles">设计原则</a>
+        <a href="#workspaces">分析路径</a>
+        <a href="#workflow">工作流程</a>
+        <a href="#evidence">验证证据</a>
+        <a class="nav-download" href="#download">下载</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span> Local-first research workspace</div>
+          <h1>研究者做决定，<br /><em>框架负责把它做完整。</em></h1>
+          <p class="hero-lead">
+            MDA 将数据清点、人工变量指定、并行任务、统计执行、完整性验证和报告交付连接成一条可追溯流程。
+            不根据列名、P 值或效应大小替你选择科学问题。
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#workspaces">了解分析路径</a>
+            <a
+              class="button button-secondary"
+              href="https://github.com/K-InvictusManeo/K-InvictusManeo.github.io/releases"
+              >查看发布页 <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <ul class="hero-facts" aria-label="产品特点">
+            <li><span>01</span> 数据留在本地</li>
+            <li><span>02</span> 人工冻结科学选择</li>
+            <li><span>03</span> 输出逐文件验证</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-label="MDA 海獭研究助手形象">
+          <div class="visual-orbit orbit-one"></div>
+          <div class="visual-orbit orbit-two"></div>
+          <div class="mascot-frame">
+            <picture>
+              <source srcset="assets/mda-otter.webp" type="image/webp" />
+              <img
+                src="assets/mda-otter.png"
+                alt="穿着黑色礼服、脸颊贴着创可贴的银灰色海獭 MDA 形象"
+                width="900"
+                height="900"
+              />
+            </picture>
+          </div>
+          <div class="floating-card floating-card-top">
+            <span class="pulse-dot"></span>
+            <strong>Local runtime</strong>
+            <small>Python + R · 本地核验</small>
+          </div>
+          <div class="floating-card floating-card-bottom">
+            <strong>Human-directed</strong>
+            <small>不自动选择结局、亚组或方法</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="principles section-shell" id="principles">
+        <div class="section-heading">
+          <div>
+            <span class="section-index">01 / Principles</span>
+            <h2>不是一个“按下按钮就替你做决定”的黑箱。</h2>
+          </div>
+          <p>
+            MDA 把科学判断留给研究者，把容易遗漏、容易重复、需要严格一致性的工作交给框架。
+          </p>
+        </div>
+
+        <div class="principle-grid">
+          <article class="principle-card card-dark">
+            <span class="card-number">01</span>
+            <h3>Human-directed</h3>
+            <p>结局、协变量、亚组、分析集、缺失数据策略和方法均由研究者明确指定并复核。</p>
+            <div class="card-signal" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          </article>
+          <article class="principle-card">
+            <span class="card-number">02</span>
+            <h3>Local-first</h3>
+            <p>桌面应用在本地项目内运行。这个介绍网站是静态页面，不接收、上传或存储研究数据。</p>
+            <div class="lock-illustration" aria-hidden="true"><span></span></div>
+          </article>
+          <article class="principle-card card-accent">
+            <span class="card-number">03</span>
+            <h3>Verified delivery</h3>
+            <p>已验证报告按清单、文件集合、大小和 SHA-256 重新核对后才进入预览与下载。</p>
+            <div class="check-illustration" aria-hidden="true">✓</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="workspaces section-shell" id="workspaces">
+        <div class="section-heading compact">
+          <div>
+            <span class="section-index">02 / Workspaces</span>
+            <h2>两条分析路径，共用一套审慎边界。</h2>
+          </div>
+        </div>
+
+        <div class="workspace-grid">
+          <article class="workspace-card microbiome-card">
+            <div class="workspace-topline">
+              <span class="workspace-tag">Microbiome</span>
+              <span class="workspace-code">M-01</span>
+            </div>
+            <h3>微生物组分析</h3>
+            <p>
+              从丰度表、元数据与分类表的结构清点开始，经过样本对齐、质量控制和明确方法选择，进入经过门控的分析与报告流程。
+            </p>
+            <ul>
+              <li>数据结构与变量角色复核</li>
+              <li>α/β 多样性与差异分析工作流</li>
+              <li>设计、输入和方法特异的执行前门控</li>
+              <li>Talk、Study 与 Technical 报告</li>
+            </ul>
+            <div class="workspace-note">高级方法不会因结果显著与否自动启用。</div>
+          </article>
+
+          <article class="workspace-card clinical-card">
+            <div class="workspace-topline">
+              <span class="workspace-tag">Randomized trials</span>
+              <span class="workspace-code">C-01</span>
+            </div>
+            <h3>随机对照试验分析</h3>
+            <p>
+              面向一般化试验数据的人工配置工作区。一次冻结多个结局、分析集和亚组，并将它们展开为完整并行任务矩阵。
+            </p>
+            <ul>
+              <li>基线、模型无关比较与调整模型</li>
+              <li>多个结局、时间窗和亚组并行执行</li>
+              <li>重复测量、生存分析与多重插补路线</li>
+              <li>中英文报告、图表、稿件与发表输出</li>
+            </ul>
+            <div class="workspace-note">复杂设计不会被自动简化为更容易的模型。</div>
+          </article>
+        </div>
+
+        <p class="scope-note">
+          方法是否可运行取决于数据结构、研究设计、方法适配器和执行前验证；“列在方法库中”不等于“可对任意数据自动执行”。
+        </p>
+      </section>
+
+      <section class="workflow" id="workflow">
+        <div class="section-shell">
+          <div class="section-heading light">
+            <div>
+              <span class="section-index">03 / Workflow</span>
+              <h2>从文件到报告，每一步都留下边界。</h2>
+            </div>
+            <p>缺少人工输入是正常暂停，不是让系统猜一个答案继续向前。</p>
+          </div>
+
+          <ol class="workflow-list">
+            <li>
+              <span class="step-number">01</span>
+              <div><strong>清点</strong><small>识别表结构、数据类型与质量问题，不分配科学角色。</small></div>
+            </li>
+            <li>
+              <span class="step-number">02</span>
+              <div><strong>指定</strong><small>由研究者选择变量角色、分析集、结局、亚组与方法。</small></div>
+            </li>
+            <li>
+              <span class="step-number">03</span>
+              <div><strong>冻结</strong><small>生成完整任务矩阵，阻断项不会被静默丢弃。</small></div>
+            </li>
+            <li>
+              <span class="step-number">04</span>
+              <div><strong>执行</strong><small>通过固定适配器和已确认设置运行本地统计任务。</small></div>
+            </li>
+            <li>
+              <span class="step-number">05</span>
+              <div><strong>交付</strong><small>验证汇总结果、来源哈希和报告文件，进入结果中心。</small></div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="evidence section-shell" id="evidence">
+        <div class="section-heading">
+          <div>
+            <span class="section-index">04 / Public evidence</span>
+            <h2>展示验收范围，也展示它没有证明什么。</h2>
+          </div>
+          <p>
+            以下数字来自固定公开随机试验数据与既有公开结果的结果中心验收，不代表所有方法、所有设计或所有数据均已被同一案例验证。
+          </p>
+        </div>
+
+        <div class="evidence-band">
+          <article>
+            <strong>28<span>/28</span></strong>
+            <p>公开数值逐项匹配</p>
+            <small>工作区 3 项 + 发表输出 25 项</small>
+          </article>
+          <article>
+            <strong>12<span>/12</span></strong>
+            <p>结果中心检查通过</p>
+            <small>包含篡改拒绝与无结果排序</small>
+          </article>
+          <article>
+            <strong>21</strong>
+            <p>发表产物重新验证</p>
+            <small>DOCX、PDF、LaTeX、图片与 HTML</small>
+          </article>
+        </div>
+
+        <div class="evidence-detail">
+          <div>
+            <h3>验证意味着什么</h3>
+            <ul>
+              <li>在声明的公开案例和比较规则下，数值与公开参考一致。</li>
+              <li>输出包文件集合、大小与哈希能够重新核对。</li>
+              <li>被篡改或未声明的输出不会进入结果中心。</li>
+            </ul>
+          </div>
+          <div>
+            <h3>验证不意味着什么</h3>
+            <ul>
+              <li>不代表系统会自动选择正确的结局、协变量、亚组或方法。</li>
+              <li>不把辅助分析的 P 值冒充原论文预设主要模型的 P 值。</li>
+              <li>不宣称覆盖所有复杂试验设计、数据问题或临床解释。</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="privacy section-shell" id="privacy">
+        <div class="privacy-panel">
+          <div class="privacy-kicker">DATA BOUNDARY</div>
+          <h2>介绍网页不碰数据。<br />分析应用优先留在本地。</h2>
+          <p>
+            本网站仅提供产品说明与版本下载入口，不包含上传框、账号系统或在线计算服务。下载后的 MDA
+            在用户选择的本地项目中工作；任何未来远程接口都需要独立授权、明确数据范围和新的隐私说明。
+          </p>
+          <div class="privacy-row">
+            <span>静态网站</span><span>无研究数据上传</span><span>本地项目边界</span><span>汇总输出交付</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="download" id="download">
+        <div class="section-shell download-inner">
+          <div>
+            <span class="section-index">05 / Download</span>
+            <h2>首个公开测试安装包<br />正在准备。</h2>
+          </div>
+          <div class="release-card">
+            <span class="release-status"><i></i> Pre-release preparation</span>
+            <h3>macOS · Apple Silicon</h3>
+            <p>
+              公开包将经过 Release 构建、Developer ID 签名、Apple 公证、干净设备安装测试和 SHA-256
+              核对。当前内部 Debug 构建不会作为下载版本发布。
+            </p>
+            <div class="release-actions">
+              <a
+                class="button button-primary"
+                href="https://github.com/K-InvictusManeo/K-InvictusManeo.github.io/releases"
+                >查看 GitHub Releases</a
+              >
+              <a
+                class="text-link"
+                href="https://github.com/K-InvictusManeo/K-InvictusManeo.github.io/issues"
+                >提交问题或建议 <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq section-shell" id="faq">
+        <div class="section-heading compact">
+          <div>
+            <span class="section-index">06 / FAQ</span>
+            <h2>开始之前需要知道的事。</h2>
+          </div>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>这是自动分析或自动选模型的 AI 工具吗？<span>＋</span></summary>
+            <p>
+              不是。MDA 可以帮助组织流程、展开任务和生成验证后的汇总输出，但科学角色与方法选择需要研究者明确指定并确认。
+            </p>
+          </details>
+          <details>
+            <summary>我的医学或微生物数据会上传到这个网站吗？<span>＋</span></summary>
+            <p>不会。这个网站是静态介绍页面，没有数据上传或在线分析功能。桌面应用以本地项目为工作边界。</p>
+          </details>
+          <details>
+            <summary>公开验收数字能证明所有分析都正确吗？<span>＋</span></summary>
+            <p>
+              不能。每份验收只支持其声明的数据集、方法、比较字段和误差规则。MDA 将通过案例级回执说明“验证了什么”和“没有验证什么”。
+            </p>
+          </details>
+          <details>
+            <summary>MDA 可以替代统计师或临床判断吗？<span>＋</span></summary>
+            <p>
+              不可以。MDA 是研究分析工作区，不是医疗器械、诊断系统或临床决策工具，结果仍需合格研究者和统计人员审阅。
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">M</span>
+        <div><strong>MDA</strong><small>Medical Data Analysis</small></div>
+      </div>
+      <p>用于研究分析与方法验证，不用于医疗诊断或个体临床决策。</p>
+      <div class="footer-links">
+        <a href="https://github.com/K-InvictusManeo/K-InvictusManeo.github.io">GitHub</a>
+        <a href="#privacy">隐私边界</a>
+        <a href="#top">回到顶部 ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>
