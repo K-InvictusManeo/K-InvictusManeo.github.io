@@ -271,7 +271,8 @@
           <figure class="app-shot app-shot-wide">
             <div class="mock-window-bar"><div class="mock-dots"><i></i><i></i><i></i></div><strong>Results explorer</strong><span>VERIFIED</span></div>
             <div class="result-view">
-              <div class="result-tabs"><b>Figures</b><span>Results table</span><span>Baseline table</span><span>Safety table</span><em>Illustrative data</em></div>
+              <div class="result-tabs"><b>Verified results</b><span>Configure &amp; run</span><span>Baseline workspace</span><span>Delivery</span><em>Illustrative data</em></div>
+              <div class="outcome-workspace-status"><span><small>TASK MATRIX</small><b>Ready</b></span><span><small>ATOMIC TASKS</small><b>8</b></span><span><small>VERIFIED RESULTS</small><b>8</b></span><span><small>DISPLAY PACKAGE</small><b>Ready</b></span></div>
               <div class="verified-figure-grid">
                 <article class="clinical-figure-card">
                   <header><div><small>FOREST PLOT · SVG</small><strong>Length of stay by prespecified population</strong></div><span>95% CI</span></header>
@@ -300,15 +301,19 @@
               </div>
               <div class="real-output-gallery" aria-label="MDA新增临床图形输出">
                 <article class="real-output-card real-output-wide">
-                  <header><div><small>PARTICIPANT FLOW · PNG / SVG</small><strong>Analysis-population accounting</strong></div><span>NEW</span></header>
+                  <header><div><small>OUTCOME FOREST · SVG / PNG</small><strong>Researcher-selected outcomes and prespecified populations</strong></div><span>MDA OUTPUT</span></header>
+                  <img src="assets/clinical/outcome_forest_plot.svg" alt="MDA虚拟随机试验森林图，展示总体和预设亚组的估计值及置信区间">
+                </article>
+                <article class="real-output-card real-output-wide">
+                  <header><div><small>PARTICIPANT FLOW · PNG / SVG</small><strong>Analysis-population accounting</strong></div><span>MDA OUTPUT</span></header>
                   <img src="assets/clinical/flow_diagram.png" alt="虚拟随机试验受试者流程图，展示随机、进入分析集与主要结局分析人数">
                 </article>
                 <article class="real-output-card">
-                  <header><div><small>BASELINE BALANCE · PNG / SVG</small><strong>Signed standardized differences</strong></div><span>NEW</span></header>
+                  <header><div><small>BASELINE BALANCE · PNG / SVG</small><strong>Signed standardized differences</strong></div><span>MDA OUTPUT</span></header>
                   <img src="assets/clinical/baseline_balance_plot.png" alt="虚拟随机试验基线平衡图，展示多个变量的有方向标准化差异">
                 </article>
                 <article class="real-output-card">
-                  <header><div><small>SAFETY INCIDENCE · PNG / SVG</small><strong>Participants with selected events</strong></div><span>NEW</span></header>
+                  <header><div><small>SAFETY INCIDENCE · PNG / SVG</small><strong>Participants with selected events</strong></div><span>MDA OUTPUT</span></header>
                   <img src="assets/clinical/safety_event_plot.png" alt="虚拟随机试验安全事件发生比例图，展示发生人数、分母和比例">
                 </article>
               </div>
@@ -323,7 +328,7 @@
               <div class="delivery-package">
                 <div class="mock-panel-title"><strong>Clinical display bundle</strong><span>SVG · CSV · bilingual HTML</span></div>
                 <div class="artifact-gallery">
-                  <article class="artifact-card artifact-figure"><header><span>FOREST PLOT</span><i>SVG</i></header><svg viewBox="0 0 180 88" aria-hidden="true"><line class="thumb-null" x1="115" y1="9" x2="115" y2="72"/><g class="thumb-ci"><line x1="67" y1="22" x2="128" y2="22"/><line x1="54" y1="42" x2="119" y2="42"/><line x1="75" y1="62" x2="146" y2="62"/></g><g class="thumb-point"><circle cx="98" cy="22" r="3"/><circle cx="88" cy="42" r="3"/><circle cx="111" cy="62" r="3"/></g><g class="thumb-label"><text x="7" y="25">Overall</text><text x="7" y="45">Female</text><text x="7" y="65">Male</text></g></svg><b>primary_forest_en.svg</b></article>
+                  <article class="artifact-card artifact-figure artifact-figure-image"><header><span>FOREST PLOT</span><i>SVG · PNG</i></header><img src="assets/clinical/outcome_forest_plot.svg" alt="森林图缩略图"><b>outcome_forest_en.svg</b></article>
                   <article class="artifact-card artifact-figure"><header><span>MI SENSITIVITY</span><i>SVG</i></header><svg viewBox="0 0 180 88" aria-hidden="true"><line class="thumb-null" x1="129" y1="9" x2="129" y2="72"/><g class="thumb-ci"><line x1="77" y1="22" x2="125" y2="22"/><line x1="88" y1="42" x2="142" y2="42"/><line x1="63" y1="62" x2="116" y2="62"/></g><g class="thumb-point"><circle cx="103" cy="22" r="3"/><circle cx="115" cy="42" r="3"/><circle cx="90" cy="62" r="3"/></g><g class="thumb-label"><text x="7" y="25">MAR</text><text x="7" y="45">δ −0.5</text><text x="7" y="65">δ +0.5</text></g></svg><b>mi_sensitivity_en.svg</b></article>
                   <article class="artifact-card artifact-figure artifact-figure-image"><header><span>PARTICIPANT FLOW</span><i>SVG · PNG</i></header><img src="assets/clinical/flow_diagram.png" alt="受试者流程图缩略图"><b>participant_flow_en.svg</b></article>
                   <article class="artifact-card artifact-figure artifact-figure-image"><header><span>BASELINE BALANCE</span><i>SVG · PNG</i></header><img src="assets/clinical/baseline_balance_plot.png" alt="基线平衡图缩略图"><b>baseline_balance_en.svg</b></article>
